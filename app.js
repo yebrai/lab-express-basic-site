@@ -6,7 +6,7 @@ app.use(express.static("public"))
 
 app.get("/home", (req, res) => {
     res.sendFile(__dirname + "/views/home-page.html")
-    res.send("hola")
+    
 })
 
 app.get("/about", (req, res) => {
@@ -25,4 +25,6 @@ app.get("*", (req, res) => {
     res.send("This page doesnt exist!")
 })
 
-app.listen(port, () => {})
+app.listen(port, () => {
+    //res.send("intruder")
+})
